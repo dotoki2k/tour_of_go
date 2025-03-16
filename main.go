@@ -8,4 +8,5 @@ func main() {
 	fmt.Printf("*** Hello this is the %s's tour of Go***\n", Name)
 	Session1()
 	Session2()
+	Session3()
 }

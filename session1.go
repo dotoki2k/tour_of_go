@@ -6,6 +6,7 @@ import (
 )
 
 func Session1() {
+	fmt.Println()
 	fmt.Println("-*- Day 1 -*-")
 	fmt.Println("My favorite number is:", add(rand.Intn(10), rand.Intn(20)))
 

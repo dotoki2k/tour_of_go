@@ -5,6 +5,7 @@ import (
 )
 
 func Session2() {
+	fmt.Println()
 	fmt.Println("-*- Day 2 -*-")
 	fmt.Println(looping())
 	fmt.Println(whileLooping())
