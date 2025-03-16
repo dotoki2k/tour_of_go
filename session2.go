@@ -10,6 +10,8 @@ func Session2() {
 	fmt.Println(whileLooping())
 	fmt.Println(isOdd(2))
 	fmt.Println(sqrt(200))
+	fSwitch(0)
+	exampleDefer()
 	fmt.Println("--- *** ---")
 }
 
@@ -62,4 +64,29 @@ func sqrt(x float64) string {
 	}
 	result := fmt.Sprintf("%v is most nearly after loop %v times.", z, count)
 	return result
+}
+
+// switch
+
+func fSwitch(a int) {
+	fmt.Println("Switch case")
+	switch {
+	case a%2 == 0:
+		fmt.Printf("%v is even\n", a)
+	case a%2 == 1:
+		fmt.Printf("%v is odd\n", a)
+	default:
+		fmt.Printf("default case!")
+	}
+}
+
+// defer
+func exampleDefer() {
+	fmt.Print("Defer: ")
+	defer fmt.Println()
+	for i := 0; i < 11; i++ {
+		defer fmt.Printf("%v ", i)
+	}
+	defer fmt.Println("A defer statement defers the execution of a function until the surrounding function returns.\nDeferred function calls are pushed onto a stack")
+
 }
