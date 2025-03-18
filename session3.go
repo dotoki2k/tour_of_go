@@ -10,6 +10,7 @@ func Session3() {
 	pointerExample()
 	structExample()
 	arrayExample()
+	slicesExample()
 }
 
 // Pointers
@@ -43,4 +44,24 @@ func arrayExample() {
 	a[3] = "Dotoki"
 	fmt.Println(a)
 	fmt.Println(a[2:])
+}
+
+// Slices are like references to arrays
+func slicesExample() {
+	names := [4]string{
+		"John",
+		"Paul",
+		"George",
+		"Ringo",
+	}
+	fmt.Println("The original array:", names)
+
+	a := names[0:2]
+	b := names[1:3]
+	fmt.Println("Slice a from index 0 to 2:", a)
+	fmt.Println("Slice b from index 1 to 3:", b)
+	fmt.Println("Change the first element on slice `b` to NoName, that will affect to original array and slice `a`.")
+	b[0] = "NoName"
+	fmt.Println("Slice a and b: ", a, b)
+	fmt.Println(names)
 }
