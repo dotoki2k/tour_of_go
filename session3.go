@@ -11,6 +11,7 @@ func Session3() {
 	structExample()
 	arrayExample()
 	slicesExample()
+	rangeExample()
 }
 
 // Pointers
@@ -64,4 +65,17 @@ func slicesExample() {
 	b[0] = "NoName"
 	fmt.Println("Slice a and b: ", a, b)
 	fmt.Println(names)
+}
+
+// Range
+func rangeExample() {
+	list := []int{2, 3, 4, 5, 6, 7, 8, 9}
+	list2 := []int{2, 3, 4, 5, 6, 7, 8, 9}
+	fmt.Println("Range example:")
+	for _, v1 := range list {
+		for _, v2 := range list2 {
+			fmt.Printf("%v * %v = %v\t", v2, v1, v2*v1)
+		}
+		fmt.Println()
+	}
 }
